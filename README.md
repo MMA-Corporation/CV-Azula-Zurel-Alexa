@@ -1,2 +1,305 @@
-# CV-Azula-Zurel-Alexa
-Tugas CV 12-4
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Azula Zurel Alexa</title>
+    <!-- Menggunakan Lucide Icons untuk estetika yang lebih baik -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #1e40af; /* Biru Gelap */
+            --secondary: #3b82f6; /* Biru Terang */
+            --accent: #dbeafe; /* Biru Muda */
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f0f4f8;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            display: flex;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Sidebar Kiri */
+        .sidebar {
+            width: 35%;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 30px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            margin-bottom: 20px;
+            background-color: #e5e7eb;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            margin-top: 3px;
+        }
+
+        .list-unstyled {
+            list-style: none;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            display: inline-block;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Konten Kanan */
+        .main-content {
+            width: 65%;
+            padding: 50px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .section-header {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary);
+        }
+
+        .time {
+            font-weight: bold;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        .edu-title {
+            font-weight: 700;
+            display: block;
+        }
+
+        .edu-school {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+            .sidebar, .main-content {
+                width: 100%;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Sidebar Kiri -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <!-- Placeholder Image -->
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400" alt="Foto Azula Zurel Alexa" class="profile-photo">
+                <h3>Azula Zurel Alexa</h3>
+                <p style="opacity: 0.8; font-size: 0.9rem;">Lahir: 02 April 2008</p>
+            </div>
+
+            <h2 class="sidebar-title"><i data-lucide="user"></i> Kontak</h2>
+            <div class="contact-item">
+                <i data-lucide="phone" size="16"></i>
+                <span>08892896579</span>
+            </div>
+            <div class="contact-item">
+                <i data-lucide="instagram" size="16"></i>
+                <span>@urell_22</span>
+            </div>
+            <div class="contact-item">
+                <i data-lucide="map-pin" size="16"></i>
+                <span>Kec. Dayeuhkolot, Desa Citeureup, Jln. Dayeuhkolot, Kp. Pasigaran, RT 05/RW 09</span>
+            </div>
+
+            <h2 class="sidebar-title"><i data-lucide="award"></i> Keahlian</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Kerja Sama Tim</span>
+                <span class="skill-tag">Bertanggung Jawab</span>
+                <span class="skill-tag">Komunikatif</span>
+                <span class="skill-tag">Siap Bekerja 3 Shift</span>
+            </div>
+
+            <h2 class="sidebar-title"><i data-lucide="languages"></i> Bahasa</h2>
+            <ul class="list-unstyled">
+                <li style="margin-bottom: 8px;">Indonesia (Aktif)</li>
+                <li>Inggris (Pasif)</li>
+            </ul>
+
+            <h2 class="sidebar-title"><i data-lucide="music"></i> Hobi</h2>
+            <p>Menyanyi</p>
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="main-content">
+            <header>
+                <h1>AZULA ZUREL<br>ALEXA</h1>
+                <p class="subtitle">Fresh Graduate - Customer Service Specialist</p>
+            </header>
+
+            <section>
+                <h2 class="section-header"><i data-lucide="file-text" size="22"></i> Tentang Diri</h2>
+                <p class="about-text">
+                    Fresh graduate jurusan IPS dari SMA KARYA PEMBANGUNAN BALEENDAH yang berorientasi pada pelayanan pelanggan. 
+                    Senang mempelajari hal-hal baru dan cepat beradaptasi dengan lingkungan kerja. 
+                    Memiliki kemampuan komunikasi yang baik dan keinginan kuat untuk meningkatkan kualitas pelayanan perusahaan 
+                    agar tercapai kepuasan pelanggan yang maksimal.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="section-header"><i data-lucide="graduation-cap" size="22"></i> Pendidikan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">2023 - 2026</span>
+                        <span class="edu-title">SMA Karya Pembangunan Baleendah</span>
+                        <span class="edu-school">Peminatan IPS</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">2020 - 2023</span>
+                        <span class="edu-title">Sekolah Menengah Pertama (SMP)</span>
+                        <span class="edu-school">Lulus Tahun 2023</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">2013 - 2014</span>
+                        <span class="edu-title">Taman Kanak-kanak (TK)</span>
+                        <span class="edu-school">Lulus Tahun 2014</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">2013</span>
+                        <span class="edu-title">PAUD</span>
+                        <span class="edu-school">Lulus Tahun 2013</span>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 40px;">
+                <h2 class="section-header"><i data-lucide="target" size="22"></i> Tujuan Karir</h2>
+                <p class="about-text">
+                    Berkontribusi secara maksimal dalam bidang pelayanan jasa/ritel dengan memanfaatkan kemampuan komunikasi 
+                    dan kerja sama tim untuk memberikan pengalaman terbaik bagi setiap pelanggan.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
